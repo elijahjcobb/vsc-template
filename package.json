@@ -1,0 +1,35 @@
+{
+	"name": "@elijahjcobb/package_name",
+	"version": "0.1.0",
+	"description": "Lorem ipsum dolor.",
+	"keywords": [],
+	"main": "out/js/index",
+	"types": "out/dts/index",
+	"files": [
+		"out"
+	],
+	"scripts": {
+		"prepublishOnly": "npm run compile",
+		"compile": "npm run clean && tsc -p tsconfig.json",
+		"clean": "rm -rf out",
+		"start": "node out/js/index.js",
+		"debug": "npm run compile && npm run start"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/elijahjcobb/package_name.git"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"author": "Elijah Cobb <elijah@elijahcobb.com> (https://elijahcobb.com/)",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/elijahjcobb/package_name/issues"
+	},
+	"homepage": "https://github.com/elijahjcobb/package_name#readme",
+	"dependencies": {
+		"@types/node": "latest",
+		"typescript": "latest"
+	}
+}
