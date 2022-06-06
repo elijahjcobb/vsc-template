@@ -11,9 +11,10 @@
 	"scripts": {
 		"prepublishOnly": "npm run compile",
 		"compile": "npm run clean && tsc -p tsconfig.json",
+		"watch": "tsc -w -p tsconfig.json",
 		"clean": "rm -rf out",
-		"start": "node out/js/index.js",
-		"debug": "npm run compile && npm run start"
+		"start": "npm run clean && npm run debug",
+		"debug": "node out/js/index.js"
 	},
 	"repository": {
 		"type": "git",
